@@ -23,11 +23,7 @@ html{
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
-.width-1350{
-    margin: 0 auto 0 auto;
-    max-width: 1350px;
-    padding: 0 15px;;
-}
+
 .navbar{
     align-items: center;
     flex-wrap: wrap;

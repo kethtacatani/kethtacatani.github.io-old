@@ -98,6 +98,7 @@ html{
     width: 70%;
 }
 .model{
+    object-fit: cover;
     top: 0;
     margin-left: 40%;
     margin-right: 2rem;

@@ -367,6 +367,9 @@ section{
             text-justify: kashida;
     
         }
+        .about-image{
+        height: 100px;
+        }
         
     }
 }

@@ -321,7 +321,7 @@ section{
     }
     #welcome-section{
         margin-right: 0;
-        background: url('formal\ attire\ id\ bg.png') no-repeat;  
+        background: url('images/formal\ attire\ id\ bg.png') no-repeat;  
         background-size: cover;
         background-position: 100px 0px;
     }
@@ -357,8 +357,16 @@ section{
     @media (max-width:500px){
         #welcome-section{
             margin-right: 0;
-            background: url('formal\ attire\ id\ bg.png') no-repeat;  
+            background: url(images/formal\ attire\ id\ bg.png) no-repeat;  
             background-size: cover;
         }
+        .quote{
+            font-size: 0.5rem;
+            text-align: auto;
+            padding: 0.5rem;
+            text-justify: kashida;
+    
+        }
+        
     }
 }

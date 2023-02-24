@@ -18,13 +18,18 @@
             <div class="nav-logo flex">
                 <img src="images/mylogo.png" alt="site-logo">
             </div>
-            <div class="menu-container" onclick="menuFunction(this)">
+            <!-- <div class="menu-container" onclick="menuFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+              </div> -->
+              <div class="menu-container" id="menu-container">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
               </div>
             <ul class="nav-link" id="drop-down">
-                <li><a class="links" href="#welcome-section">Home</a></li>
+                <li ><a class="links" href="#welcome-section">Home</a></li>
                 <li><a class="links" href="#projects">Projects</a></li>
                 <li><a class="links" href="#about">About</a></li>
                 <a class="contact" href="#contact">Let's Talk</a>
@@ -36,7 +41,7 @@
                 <nav class="welcome-page">
                     <p class="self-intro">Hi! I am <span class="my-name">Keth Dominic Tacatani</span></p>
                     <p class="tag-line">Your partner in building scalable, reliable software</p>
-                <img class="model" src="images/formal attire id bg.png" alt="my picture">
+                <img class="model" src="images/formal attire id bg.png" alt="my pic">
             </nav>
         </section>
         <section id="projects" class="">
@@ -82,7 +87,7 @@
             <p class="section-title flex">About me</p>
             <div class="about-me flex">
                 <div class="about-me-text">
-                    <p class="quote"><span class="double-quote">"</span>Hi there, I'm Keth Dominic Tacatani! I'm currently a third-year college student pursuing a degree in Computer Science. As a tech-savvy person, I'm always excited to learn about the latest technological advancements and how they can be used to improve our lives. In my free time, I enjoy tinkering with code, exploring new programming languages, and developing my own projects <br>
+                    <p class="quote"><span class="double-quote">"</span>Hi there, I'm Keth Dominic Tacatani! I'm currently a third-year college student pursuing a degree in Computer Science. As a tech-savvy person, I'm always excited to learn about the latest technological advancements and how they can be used to improve our lives. In my free time, I enjoy tinkering with code, exploring new programming languages, and developing my own projects <br> 
                      &nbsp&nbsp&nbspThank you for taking the time to learn a bit about me! I'm excited to see how we can work together to bring your project to life.<span class="double-quote">"</span></p>
 
 
@@ -100,7 +105,7 @@
                     <p>Email</p>
                 </div>
                 <div >
-                    <a href="https://github.com/kethtacatani" target="_blank"><img class="contact-logo" src="images/github.png" alt="github"></a>
+                    <a href="https://github.com/suturoberi" target="_blank"><img class="contact-logo" src="images/github.png" alt="github"></a>
                     <p>Github</p>
         
                 </div>
@@ -112,27 +117,25 @@
         </section>
     </div>
     <script>
-        var menuContainer;
-        function menuFunction(x) {
-            menuContainer = x;
-          x.classList.toggle("menu-open");
-          document.getElementById("drop-down").classList.toggle("show-nav-link");
-        }
-        window.onclick = function(event) {
-            if (!event.target.matches('.menu-container')) {
-                var dropdowns = document.getElementsByClassName("nav-link");
-                
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show-nav-link')) {
-                    openDropdown.classList.remove('show-nav-link');
-                    menuContainer.classList.remove("menu-open");
-                }
-                }
-            }
-        }
+        const menubtn = document.getElementById("menu-container");
+        const dropdown = document.getElementById("drop-down");
+        
+        const toggleDropdown = function () {
+            menubtn.classList.toggle("menu-open");
+            dropdown.classList.toggle("show-nav-link");
+        };
 
-        </script>
+        menubtn.addEventListener("click", function (e) {
+            e.stopPropagation();
+            toggleDropdown();
+        });
+
+        document.documentElement.addEventListener("click", function () {
+            if (dropdown.classList.contains("show-nav-link")) {
+                toggleDropdown();
+            }
+        });
+
+    </script>
 </body>
 </html>

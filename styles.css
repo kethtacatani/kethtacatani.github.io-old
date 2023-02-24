@@ -123,7 +123,7 @@ section{
 }
 .project{
     margin-top: 30px;
-    display: flex;
+    display: flex; 
 }
 .project-pics{
     height:300px;
@@ -249,6 +249,7 @@ section{
         display: flex;
     }
     .navbar{
+        justify-content: space-between;
         top:0;
         position: fixed;
         height: fit-content;
@@ -258,13 +259,13 @@ section{
     }
     .menu-container{
         padding-right: 2rem;
-        width: 70%;
+        width: fit-content;
         display: flex;
         align-items: end;
         flex-direction: column;
         justify-content: space-between;
         height: 30px;
-        z-index:2;
+        z-index: 2;
     }
     .bar1, .bar2, .bar3{
         background-color: whitesmoke;
@@ -325,6 +326,7 @@ section{
         background: url('images/formal\ attire\ id\ bg.png') no-repeat;  
         background-size: cover;
         background-position: 100px 0px;
+        background-size: 200px;
     }
     .model{
         display: none;
@@ -367,9 +369,6 @@ section{
             padding: 0.5rem;
             text-justify: kashida;
     
-        }
-        .about-image{
-        height: 100px;
         }
         
     }

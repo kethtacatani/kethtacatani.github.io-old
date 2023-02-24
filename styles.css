@@ -302,7 +302,7 @@ section{
         height: 130px;
     }
     .quote{
-        font-size: 0.8rem;
+        font-size: 1rem;
         text-align: auto;
         text-justify: kashida;
 
@@ -312,6 +312,11 @@ section{
     }
     .contact-logo{
         height: 50px;
+    }
+    .about-me{
+        flex-direction: column-reverse;
+        align-items: center;
+        margin: 0;
     }
     .about-me-text{
         height: inherit;
@@ -332,29 +337,42 @@ section{
         display: none;
     }
     .project{
-        height: 100px;
-        margin-bottom: 60px;
+        flex-direction: column;
+        margin: 0;
+        margin-bottom: 3rem;
+        
         
     }
+    
     .project-container{
-        margin-top: -25px;
+        margin-top: 25px;
+    }
+    .project-pics{
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+
     }
     .project-pics img{
-        width: 100px;
+        width: 70%;
         margin-right: 8px;
     }
     .project-description p{
-        font-size: 0.5rem;
+        
     }
     .project-description{
+        margin-top: 1rem;
         margin-left: 12px;
     }
     .project-name{
-        font-size: 1rem;
+       
     }
     .java, .mysql, .sqlite{
         font-size: 0.5rem;
         padding-bottom: 3px;
+    }
+    .contact-container > div{
+        margin-right: .5rem;
     }
 
     @media (max-width:500px){
@@ -364,7 +382,7 @@ section{
             background-size: cover;
         }
         .quote{
-            font-size: 0.5rem;
+            font-size: 1rem;
             text-align: auto;
             padding: 0.5rem;
             text-justify: kashida;

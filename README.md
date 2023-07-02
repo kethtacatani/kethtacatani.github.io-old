@@ -1,3 +1,3 @@
 
-<a href="kethtacatani.github.io>kethtacatani.github.io</a>
+[kethtacatani.github.io](https://kethtacatani.github.io).
 my portfolio
